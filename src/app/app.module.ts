@@ -18,7 +18,7 @@ import { DynamicComponentDirective } from './directives/dynamic-component.direct
     MyLogoComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule
   ],
   providers: [],
