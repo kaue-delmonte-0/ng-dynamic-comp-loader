@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:ssr",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -12,8 +12,7 @@
     "serve:ssr": "node dist/ng-dynamic-comp-loader/server/main.js",
     "build:ssr": "ng build --prod && ng run ng-dynamic-comp-loader:server:production",
     "prerender": "ng run ng-dynamic-comp-loader:prerender",
-    "start:heroku":"node dist/ng-dynamic-comp-loader/server/main.js",
-    "postinstall": "npm run build:ssr"
+    "start:heroku":"node dist/ng-dynamic-comp-loader/server/main.js"
   },
   "private": true,
   "dependencies": {
