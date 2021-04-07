@@ -40,7 +40,11 @@ export class AppComponent implements OnInit {
 
   loadComponent({ component, data }: { component: any, data: any }) {
 
+    console.log("Loading component: " + component);
+
     const componentClass = getDynamicComponent(component) || Error404Component;
+
+    if(componentClass instanceof Error404Component) console.log("Not found, creating 404 component"); else console.log("Found!", componentClass)
 
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(componentClass);
 
